@@ -56,16 +56,24 @@ AwsCognitoRequest _$AwsCognitoRequestFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$AwsCognitoRequestToJson(AwsCognitoRequest instance) =>
-    <String, dynamic>{
-      'userAttributes': instance.userAttributes,
-      'validationData': instance.validationData,
-      'clientMetadata': instance.clientMetadata,
-      'newDeviceUsed': instance.newDeviceUsed,
-      'groupConfiguration': instance.groupConfiguration,
-      'password': instance.password,
-      'codeParameter': instance.codeParameter,
-    };
+Map<String, dynamic> _$AwsCognitoRequestToJson(AwsCognitoRequest instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('userAttributes', instance.userAttributes);
+  writeNotNull('validationData', instance.validationData);
+  writeNotNull('clientMetadata', instance.clientMetadata);
+  writeNotNull('newDeviceUsed', instance.newDeviceUsed);
+  writeNotNull('groupConfiguration', instance.groupConfiguration);
+  writeNotNull('password', instance.password);
+  writeNotNull('codeParameter', instance.codeParameter);
+  return val;
+}
 
 AwsCognitoResponse _$AwsCognitoResponseFromJson(Map<String, dynamic> json) {
   return AwsCognitoResponse(
@@ -91,21 +99,29 @@ AwsCognitoResponse _$AwsCognitoResponseFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$AwsCognitoResponseToJson(AwsCognitoResponse instance) =>
-    <String, dynamic>{
-      'autoConfirmUser': instance.autoConfirmUser,
-      'autoVerifyPhone': instance.autoVerifyPhone,
-      'autoVerifyEmail': instance.autoVerifyEmail,
-      'claimsOverrideDetails': instance.claimsOverrideDetails,
-      'userAttributes': instance.userAttributes,
-      'finalUserStatus': instance.finalUserStatus,
-      'messageAction': instance.messageAction,
-      'desiredDeliveryMediums': instance.desiredDeliveryMediums,
-      'forceAliasCreation': instance.forceAliasCreation,
-      'smsMessage': instance.smsMessage,
-      'emailMessage': instance.emailMessage,
-      'emailSubject': instance.emailSubject,
-    };
+Map<String, dynamic> _$AwsCognitoResponseToJson(AwsCognitoResponse instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('autoConfirmUser', instance.autoConfirmUser);
+  writeNotNull('autoVerifyPhone', instance.autoVerifyPhone);
+  writeNotNull('autoVerifyEmail', instance.autoVerifyEmail);
+  writeNotNull('claimsOverrideDetails', instance.claimsOverrideDetails);
+  writeNotNull('userAttributes', instance.userAttributes);
+  writeNotNull('finalUserStatus', instance.finalUserStatus);
+  writeNotNull('messageAction', instance.messageAction);
+  writeNotNull('desiredDeliveryMediums', instance.desiredDeliveryMediums);
+  writeNotNull('forceAliasCreation', instance.forceAliasCreation);
+  writeNotNull('smsMessage', instance.smsMessage);
+  writeNotNull('emailMessage', instance.emailMessage);
+  writeNotNull('emailSubject', instance.emailSubject);
+  return val;
+}
 
 AwsGroupConfiguration _$AwsGroupConfigurationFromJson(
     Map<String, dynamic> json) {

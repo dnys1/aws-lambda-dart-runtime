@@ -44,27 +44,14 @@ class AwsCognitoEvent {
   Map<String, dynamic> toJson() => _$AwsCognitoEventToJson(this);
 }
 
-@JsonSerializable()
+@JsonSerializable(includeIfNull: false)
 class AwsCognitoRequest {
-  @JsonKey()
   final Map<String, dynamic> userAttributes;
-
-  @JsonKey()
   final Map<String, String> validationData;
-
-  @JsonKey()
   final Map<String, String> clientMetadata;
-
-  @JsonKey()
   final bool newDeviceUsed;
-
-  @JsonKey()
   final AwsGroupConfiguration groupConfiguration;
-
-  @JsonKey()
   final String password;
-
-  @JsonKey()
   final String codeParameter;
 
   const AwsCognitoRequest(
@@ -82,42 +69,19 @@ class AwsCognitoRequest {
   Map<String, dynamic> toJson() => _$AwsCognitoRequestToJson(this);
 }
 
-@JsonSerializable()
+@JsonSerializable(includeIfNull: false)
 class AwsCognitoResponse {
-  @JsonKey()
   final bool autoConfirmUser;
-
-  @JsonKey()
   final bool autoVerifyPhone;
-
-  @JsonKey()
   final bool autoVerifyEmail;
-
-  @JsonKey()
   final AwsClaimOverrideDetails claimsOverrideDetails;
-
-  @JsonKey()
   final Map<String, String> userAttributes;
-
-  @JsonKey()
   final String finalUserStatus;
-
-  @JsonKey()
   final String messageAction;
-
-  @JsonKey()
   final List<String> desiredDeliveryMediums;
-
-  @JsonKey()
   final bool forceAliasCreation;
-
-  @JsonKey()
   final String smsMessage;
-
-  @JsonKey()
   final String emailMessage;
-
-  @JsonKey()
   final String emailSubject;
 
   const AwsCognitoResponse(
